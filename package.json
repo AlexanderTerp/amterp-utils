@@ -1,0 +1,18 @@
+{
+    "name": "com.alexanderterp.amterp-utils",
+    "version": "1.0.0",
+    "displayName": "AMTerp Utils",
+    "description": "Some handy utils I find myself often wanting and using in projects.",
+    "unity": "2021.1",
+    "dependencies": {},
+    "keywords": [
+        "library",
+        "utils",
+        "utility"
+    ],
+    "author": {
+        "name": "Alexander Terp",
+        "email": "alexander.terp@gmail.com",
+        "url": "https://alexanderterp.com"
+    }
+}
