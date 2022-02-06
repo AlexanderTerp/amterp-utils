@@ -6,6 +6,7 @@ using UnityEngine;
 namespace Amterp.Utils {
     public static class CSharpUtil {
         private static readonly DateTime EPOCH = new DateTime(1970, 1, 1, 0, 0, 0);
+        private static System.Random RNG = new System.Random();
 
         public static void ForEach<T>(this IEnumerable<T> enumerable, Action<T> action) {
             foreach (var item in enumerable)
@@ -30,6 +31,18 @@ namespace Amterp.Utils {
 
         public static Vector3 ZeroY(this Vector3 vector3) {
             return new Vector3(vector3.x, 0, vector3.z);
+        }
+
+        public static Vector3 To3d(this Vector2 v) {
+            return new Vector3(v.x, 0, v.y);
+        }
+
+        public static T Sample<T>(this IList<T> collection) {
+            return collection[RNG.Next(0, collection.Count - 1)];
+        }
+
+        public static string Capitalize(this string thisString) {
+            return char.ToUpper(thisString[0]) + thisString.Substring(1);
         }
 
         public static string ToDetailedString(this Vector3 vector3) {
