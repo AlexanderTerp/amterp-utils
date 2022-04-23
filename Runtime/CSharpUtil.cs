@@ -71,9 +71,12 @@ namespace Amterp.Utils {
             if (action != null) action(arg1, arg2);
         }
 
-        public static V GetValueOrDefault<K, V>(this IDictionary<K, V> dict, K key, V defaultValue = default(V)) {
-            V value;
-            return dict.TryGetValue(key, out value) ? value : defaultValue;
+        public static V GetValueOrDefault<K, V>(this IDictionary<K, V> dictionary, K key, V defaultValue) {
+            return dictionary.TryGetValue(key, out var value) ? value : defaultValue;
+        }
+
+        public static V GetValueOrDefault<K, V>(this IDictionary<K, V> dictionary, K key, Func<V> defaultValueProvider) {
+            return dictionary.TryGetValue(key, out var value) ? value : defaultValueProvider();
         }
     }
 }
