@@ -52,18 +52,29 @@ namespace Amterp.Utils {
 
         // UNITY EXTENSIONS
 
+        public static Vector2 ToFloat2(this Vector2Int vector2Int) {
+            return new Vector2(vector2Int.x, vector2Int.y);
+        }
+
         public static Vector2 ToVector2DroppingY(this Vector3 vector3) {
             return new Vector2(vector3.x, vector3.z);
+        }
+
+        public static Vector2 ToVector2DroppingZ(this Vector3 vector3) {
+            return new Vector2(vector3.x, vector3.y);
         }
 
         public static Vector3 ZeroY(this Vector3 vector3) {
             return new Vector3(vector3.x, 0, vector3.z);
         }
 
-        public static Vector3 To3d(this Vector2 v) {
+        public static Vector3 To3dVector3(this Vector2 v) {
             return new Vector3(v.x, 0, v.y);
         }
 
+        public static Vector3 To2dVector3(this Vector2 v) {
+            return new Vector3(v.x, v.y, 0);
+        }
 
         // C# EXTENSIONS
 

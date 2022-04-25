@@ -1,6 +1,6 @@
 {
     "name": "com.alexanderterp.amterp-utils",
-    "version": "1.2.0",
+    "version": "1.3.0",
     "displayName": "AMTerp Utils",
     "description": "Some handy utils I find myself often wanting and using in projects.",
     "unity": "2021.1",
